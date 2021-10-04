@@ -1,0 +1,32 @@
+/* ==========================================================================
+Styles for Detail component
+========================================================================== */
+
+@import "../../../assets/styles/main";
+
+// Start styles Detail component
+.p-detail {
+  width: 80%;
+  background-color: $white;
+  padding: 50px;
+
+  .detail-upside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+
+    .detail-image {
+      background-color: brown;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+    }
+
+    .detail-movie {
+      background-color: chartreuse;
+      width: 50%;
+    }
+  }
+}

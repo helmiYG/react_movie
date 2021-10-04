@@ -1,0 +1,26 @@
+/* ==========================================================================
+Styles for Content component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/main";
+
+// Start styles Content component
+.o-content {
+  @include absCenter;
+  
+  width: 50%;
+  text-align: center;
+  padding: 20px;
+  
+
+
+  .list-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+}

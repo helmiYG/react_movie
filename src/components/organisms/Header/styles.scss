@@ -1,0 +1,63 @@
+/* ==========================================================================
+Styles for Header component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/main";
+
+// Start styles Header component
+.o-Header {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  height: 110.85px;
+  padding: 20px 70px;
+  .header-title {
+    font-family: 'Press Start 2P';
+    color: $dark-orange;
+    font-weight: 700;
+    letter-spacing: 10px;
+  }
+
+  .list-menu {
+    li {
+      cursor: pointer;
+      display: inline-block;
+      padding: 20px;
+      text-align: center;
+    }
+  }
+
+  .burger {
+    display: none;
+    cursor: pointer;
+    div {
+      width: 20px;
+      height: 2px;
+      background-color: $outer-space;
+      margin: 5px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .toggle {
+    .line1 {
+      transform: rotate(-45deg) translate(-4px, 6px);
+    }
+    .line2 {
+      opacity: 0;
+    }
+    .line3 {
+      transform: rotate(45deg) translate(-4px, -6px);
+    }
+  }
+}
+
+
+
+
+
+
+
+
