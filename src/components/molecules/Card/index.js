@@ -11,7 +11,7 @@ const Card = ({ image, className, name, onClick }) => {
   // image
   return (
     <div className={classNames} onClick={onClick}>
-      <img src={image} alt='gambar'/>
+      <img src={image} className='image' alt='gambar'/>
       {name}
     </div>
   );

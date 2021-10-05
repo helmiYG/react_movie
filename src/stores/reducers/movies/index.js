@@ -3,11 +3,15 @@
 // --------------------------------------------------------
 
 import {
-  SET_LOADING
+  SET_LOADING,
+  SET_MOVIES,
+  SET_DETAIL_MOVIES
 } from 'stores/actions/movies';
 
 const initialState = {
-  isLoading: false
+  isLoading: false,
+  movies: [],
+  detailMovie: {}
 };
 
 export default (state = initialState, { payload, type }) => {
@@ -16,6 +20,16 @@ export default (state = initialState, { payload, type }) => {
       return {
         ...state,
         isLoading: payload
+      };
+    case SET_DETAIL_MOVIES:
+      return {
+        ...state,
+        detailMovie: payload
+      };
+    case SET_MOVIES:
+      return {
+        ...state,
+        movies: payload
       };
     default:
       return state;

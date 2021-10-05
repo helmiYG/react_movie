@@ -6,12 +6,13 @@ import PropTypes from 'prop-types'
 import Dashboard  from 'container/templates/Dashboard'
 import HomeComponent from './HomeComponent'
 
+
 const Home = props => {
   return (
-    <Dashboard 
-      title='MOVIEDB'
-      content={<HomeComponent  />}
-    />
+      <Dashboard 
+        title='MOVIEDB'
+        content={<HomeComponent  />}
+      />
   )
 }
 

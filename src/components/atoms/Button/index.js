@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 import classname from 'classnames';
 import './styles.scss';
 
-const Button = ({ className, type, onMouseOver, onFocus, onClick,style, disabled, id, children }) => {
-  const classNames = classname('a-button', className);
+const Button = ({ type, onMouseOver, onFocus, onClick, disabled, id, children, variant }) => {
+  const classNames = classname('a-button', variant);
 
   return (
     <button
@@ -17,7 +17,6 @@ const Button = ({ className, type, onMouseOver, onFocus, onClick,style, disabled
       onMouseOver={onMouseOver}
       onFocus={onFocus}
       onClick={onClick}
-      style={style}
       disabled={disabled}
       id={id}
     >
@@ -27,11 +26,25 @@ const Button = ({ className, type, onMouseOver, onFocus, onClick,style, disabled
 }
 
 Button.propTypes = {
-propsName: PropTypes.string,
+  type: PropTypes.string,
+  id: PropTypes.string,
+  variant: PropTypes.string,
+  onMouseOver: PropTypes.func,
+  onFocus: PropTypes.func,
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool,
+  children: PropTypes.node,
 };
 
 Button.defaultProps = {
-propsName: '',
+  type: '',
+  children: '',
+  variant: '',
+  id: '',
+  onMouseOver: () => {},
+  onFocus: () => {},
+  onClick: () => {},
+  disabled: false
 };
 
 export default Button;

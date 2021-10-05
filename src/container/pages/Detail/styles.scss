@@ -6,27 +6,41 @@ Styles for Detail component
 
 // Start styles Detail component
 .p-detail {
-  width: 80%;
+  width: 100%;
   background-color: $white;
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   .detail-upside {
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
     margin-bottom: 50px;
 
-    .detail-image {
-      background-color: brown;
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      align-self: center;
+    img {
+      cursor: pointer;
+      &:hover {
+        box-shadow: 1px 2px 10px $outer-space;
+        transform: translateY(-2px);
+      }
+      
+      &:active {
+        box-shadow: 0 0 5px $outer-space;
+        transform: translateY(2px);
+      }
     }
 
     .detail-movie {
-      background-color: chartreuse;
-      width: 50%;
+      text-align: left;
+      margin-left: 20px;
+
+      .detail-title {
+        font-weight: bold;
+      }
+
+      .detail-content {
+        // width: 400px;
+      }
     }
   }
 }
